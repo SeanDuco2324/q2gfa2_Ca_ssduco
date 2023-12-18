@@ -1,0 +1,118 @@
+*{margin: 0;padding: 0; box-sizing: border-box; }
+html{
+    scroll-behavior: smooth;
+    scroll-padding: 5dvh;
+    overflow-x: hidden;
+}
+a{text-decoration: none; color: rgb(240, 240, 240)}
+a:visited{ text-decoration: underline;}
+header{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 2dvh;
+    padding-bottom: 2dvh;
+    background: #080404a1;
+    color: white;
+    position: fixed;
+    width: 110dvw;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.5rem;
+    
+}
+
+header{position: fixed; z-index: 110;}
+section{
+    height: 100dvh;
+    width: 100dvw;
+    display: inline-flex;
+    flex-direction: column;
+    scroll-snap-align: start;
+    overflow: hidden;
+    padding-top: 4.5vh;
+    padding-left: 2.5vw;
+    padding-right: 2.5vw;
+}
+section.banner{
+    position: relative;
+    z-index: 80;
+    padding: 1.5;
+    background: url(media/starry\ night.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    h1{
+        position: relative;
+        font-family:Arial, Helvetica, sans-serif;
+        font-size: xx-large;
+        z-index: 100;
+        text-align: center;
+        top: 30vh;
+        text-shadow: 5px 5px rgb(14, 12, 56);
+        color: rgb(252, 252, 252);
+    }
+}
+
+.celestial{
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 90;
+}
+
+#earth-like{
+    background-image: url(media/Earth-like.gif);
+    width: 400px;
+    height: 400px;
+    animation:earthmotion 30s linear infinite;
+    
+}
+
+
+#black-hole{
+    background-image: url(media/Black\ Hole.gif);
+    width: 100px;
+    height: 100px;
+    animation: blackholegrow 30s;
+    position: relative;
+    
+}
+
+#mars{
+    background-image: url(media/Mars.gif);
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    animation: marsmotion 30s linear infinite;
+    
+}
+
+#star{
+    background-image: url(media/Star.gif);
+    width:300px;
+    height:300px;
+    position: absolute;
+    animation: star 30s;
+    
+}
+
+@keyframes marsmotion{
+    0%  {transform:translate(1000px,1000px);}
+    100%{transform:translate(1000px,-1000px);}
+}
+
+@keyframes blackholegrow{
+    0%{transform:scale(1);}
+    100%{transform:scale(7);}
+}
+
+@keyframes earthmotion{
+    0%  {transform:translate(500px, -500px);}
+    100%{transform:translate(500px,500px);}
+}
+
+@keyframes star{
+    0%{transform:rotate(30deg);}
+    100%{transform:rotate(90deg);}
+}
+
